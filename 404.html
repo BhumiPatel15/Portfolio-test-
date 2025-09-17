@@ -1,0 +1,85 @@
+---
+layout: default
+title: "Page Not Found"
+description: "The page you're looking for doesn't exist."
+permalink: /404.html
+---
+
+<div class="error-page">
+  <div class="container">
+    <div class="error-content">
+      <h1 class="error-title">404</h1>
+      <h2 class="error-subtitle">Page Not Found</h2>
+      <p class="error-description">
+        Sorry, the page you're looking for doesn't exist or has been moved.
+      </p>
+      <div class="error-actions">
+        <a href="{{ '/' | relative_url }}" class="btn btn-primary">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-home"></use>
+          </svg>
+          Go Home
+        </a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.error-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.error-title {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-4);
+  line-height: 1;
+}
+
+.error-subtitle {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-4);
+}
+
+.error-description {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: 500px;
+}
+
+.error-actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .error-title {
+    font-size: 4rem;
+  }
+  
+  .error-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+<!-- Add home icon to SVG symbols -->
+<svg style="display: none;" aria-hidden="true">
+  <defs>
+    <symbol id="icon-home" viewBox="0 0 24 24">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      <polyline points="9,22 9,12 15,12 15,22"/>
+    </symbol>
+  </defs>
+</svg>

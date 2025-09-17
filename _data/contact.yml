@@ -1,0 +1,105 @@
+# Contact Section
+# This section displays your contact information and optional contact form
+
+# Primary Contact Information
+email: "you@example.com"
+location: "Chicago, IL, USA"
+phone: ""  # Optional: add phone number if you want to display it
+
+# Contact Methods
+# These will be displayed as contact options
+contact_methods:
+  - type: "email"
+    label: "Email"
+    value: "you@example.com"
+    href: "mailto:you@example.com"
+    icon: "mail"
+    primary: true
+
+  - type: "linkedin"
+    label: "LinkedIn"
+    value: "Connect on LinkedIn"
+    href: "https://www.linkedin.com/in/yourusername"
+    icon: "linkedin"
+
+  - type: "phone"
+    label: "Phone"
+    value: "+1 (555) 123-4567"
+    href: "tel:+15551234567"
+    icon: "phone"
+    # Uncomment to display phone contact
+
+# Social Links (duplicated from site.yml for contact section)
+social_links:
+  - label: "LinkedIn"
+    icon: "linkedin"
+    url: "https://www.linkedin.com/in/yourusername"
+  - label: "GitHub"
+    icon: "github"
+    url: "https://github.com/yourusername"
+  - label: "Email"
+    icon: "mail"
+    url: "mailto:you@example.com"
+
+# Contact Form (optional)
+# Uses Formspree for form handling - sign up at https://formspree.io
+contact_form:
+  enabled: true  # Set to false to hide the contact form
+  formspree_endpoint: ""  # Add your Formspree endpoint here (e.g., "https://formspree.io/f/xpzgkqyw")
+  title: "Send me a message"
+  description: "I'm always interested in discussing cybersecurity opportunities, collaboration, or just connecting with fellow security professionals."
+  
+  # Form Fields
+  fields:
+    - name: "name"
+      label: "Name"
+      type: "text"
+      required: true
+      placeholder: "Your full name"
+    
+    - name: "email"
+      label: "Email"
+      type: "email"
+      required: true
+      placeholder: "your.email@example.com"
+    
+    - name: "subject"
+      label: "Subject"
+      type: "text"
+      required: true
+      placeholder: "What's this about?"
+    
+    - name: "message"
+      label: "Message"
+      type: "textarea"
+      required: true
+      placeholder: "Tell me about your project, opportunity, or just say hello!"
+      rows: 5
+
+  # Form Settings
+  submit_button_text: "Send Message"
+  success_message: "Thanks for your message! I'll get back to you soon."
+  error_message: "Oops! There was an error sending your message. Please try again or email me directly."
+
+# Availability Status (optional)
+availability:
+  status: "open"  # "open", "limited", "closed"
+  message: "Currently seeking cybersecurity internships and entry-level positions"
+  # Alternative messages:
+  # message: "Available for freelance security consulting projects"
+  # message: "Not currently taking on new projects"
+
+# Call-to-Action
+cta:
+  title: "Let's Connect"
+  description: "Whether you're looking to collaborate on a project, discuss cybersecurity opportunities, or just want to connect, I'd love to hear from you."
+
+# Contact Settings
+contact_settings:
+  show_availability: true    # Display availability status
+  show_location: true        # Display location information
+  show_response_time: true   # Display expected response time
+  response_time: "24-48 hours"  # Expected response time
+  
+# Privacy Note (optional)
+privacy_note: "Your contact information will only be used to respond to your inquiry and will not be shared with third parties."

@@ -1,0 +1,29 @@
+# About Me Section
+# This section provides a personal introduction and key highlights
+
+# Main About Text
+# Keep this conversational and personal (3-4 lines recommended)
+summary: |
+  I'm a cybersecurity graduate student at Roosevelt University with a passion for cloud security and incident response. 
+  My journey began in India working with SIEM systems, and now I'm focused on building secure, compliant solutions 
+  for healthcare organizations. I believe in making security accessible and turning complex compliance requirements 
+  into practical, implementable strategies.
+
+# Key Highlights (2-4 bullet points)
+# These should be your strongest selling points
+highlights:
+  - "Cloud security architecture on AWS with focus on identity, logging, and guardrails"
+  - "Incident response playbook development and Splunk-based threat investigations"
+  - "HIPAA/HITRUST-compliant SDLC implementation for NGO healthcare applications"
+  - "Leadership experience as Girls Who Code President and WiCyS member"
+
+# Optional: Profile Image
+# Place a professional photo in assets/img/ and uncomment below
+# image: "/assets/img/about-photo.jpg"
+# image_alt: "Bhumi Patel working on cybersecurity projects"
+
+# Optional: Fun Facts or Personal Touch
+# personal_notes:
+#   - "Enjoys Arduino projects and hardware security"
+#   - "Volunteers at local DFIR workshops"
+#   - "Passionate about making cybersecurity more inclusive"

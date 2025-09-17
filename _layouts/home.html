@@ -1,0 +1,110 @@
+---
+layout: default
+---
+
+<div class="home-page">
+  <!-- Hero Section -->
+  {% if site.data.intro %}
+    {% include components/hero.html %}
+  {% endif %}
+
+  <!-- About Section -->
+  {% if site.data.about and site.data.about.summary %}
+    <section id="about" class="section about-section" aria-labelledby="about-heading">
+      <div class="container">
+        {% include components/section-heading.html title="About Me" subtitle="Get to know me better" %}
+        {% include components/about.html %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Skills Section -->
+  {% if site.data.skills and site.data.skills.categories %}
+    <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+      <div class="container">
+        {% include components/section-heading.html title="Skills & Technologies" subtitle="My technical expertise" %}
+        {% include components/skills.html %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Experience Section -->
+  {% if site.data.experience and site.data.experience.items %}
+    <section id="experience" class="section experience-section" aria-labelledby="experience-heading">
+      <div class="container">
+        {% include components/section-heading.html title="Work Experience" subtitle="My professional journey" %}
+        {% include components/timeline.html %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Education Section -->
+  {% if site.data.education and site.data.education.items %}
+    <section id="education" class="section education-section" aria-labelledby="education-heading">
+      <div class="container">
+        {% include components/section-heading.html title="Education" subtitle="Academic background" %}
+        {% include components/education.html %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Projects Section -->
+  {% if site.data.projects and site.data.projects.cards %}
+    <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+      <div class="container">
+        {% include components/section-heading.html title="Featured Projects" subtitle="Things I've built" %}
+        {% include components/projects.html %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Organizations Section -->
+  {% if site.data.orgs and site.data.orgs.items %}
+    <section id="orgs" class="section orgs-section" aria-labelledby="orgs-heading">
+      <div class="container">
+        {% include components/section-heading.html title="Organizations" subtitle="Community involvement" %}
+        {% include components/organizations.html %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Volunteer Section -->
+  {% if site.data.volunteer and site.data.volunteer.items %}
+    <section id="volunteer" class="section volunteer-section" aria-labelledby="volunteer-heading">
+      <div class="container">
+        {% include components/section-heading.html title="Volunteer Work" subtitle="Giving back to the community" %}
+        {% include components/volunteer.html %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Certificates Section -->
+  {% if site.data.certs and site.data.certs.items %}
+    <section id="certs" class="section certs-section" aria-labelledby="certs-heading">
+      <div class="container">
+        {% include components/section-heading.html title="Certificates & Achievements" subtitle="Professional recognition" %}
+        {% include components/certificates.html %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Blog Section -->
+  {% if site.data.blog and site.data.blog.external %}
+    <section id="blog" class="section blog-section" aria-labelledby="blog-heading">
+      <div class="container">
+        {% include components/section-heading.html title="Latest Writing" subtitle="Thoughts on cybersecurity" %}
+        {% include components/blog.html %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Contact Section -->
+  {% if site.data.contact %}
+    <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        {% include components/section-heading.html title="Get In Touch" subtitle="Let's connect" %}
+        {% include components/contact.html %}
+      </div>
+    </section>
+  {% endif %}
+</div>

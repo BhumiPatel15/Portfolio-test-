@@ -1,0 +1,67 @@
+# Blog Section
+# This section displays links to your external blog posts (e.g., on Motion, Medium, etc.)
+
+# External Blog Posts
+# These are posts you've written on external platforms
+external:
+  - title: "Cloud IR: Guardrails that Actually Matter"
+    url: "https://your-motion-blog-link/cloud-ir-guardrails"
+    platform: "Motion"  # Platform where the post is published
+    date: "2025-03"      # Format: YYYY-MM
+    description: "Deep dive into implementing effective cloud security guardrails for incident response in AWS environments."
+    tags: ["Cloud Security", "Incident Response", "AWS", "Best Practices"]
+    read_time: "8 min"   # Optional: estimated reading time
+
+  - title: "HIPAA Compliance in Plain English"
+    url: "https://your-motion-blog-link/hipaa-plain-english"
+    platform: "Motion"
+    date: "2025-02"
+    description: "Breaking down HIPAA requirements for developers and security teams building healthcare applications."
+    tags: ["HIPAA", "Compliance", "Healthcare", "Security"]
+    read_time: "6 min"
+
+  - title: "Building Your First Incident Response Playbook"
+    url: "https://your-motion-blog-link/ir-playbook-guide"
+    platform: "Motion"
+    date: "2025-01"
+    description: "Step-by-step guide to creating effective incident response procedures for small security teams."
+    tags: ["Incident Response", "Playbooks", "Security Operations"]
+    read_time: "10 min"
+
+  # Example of additional blog posts (commented out)
+  # - title: "Splunk Query Optimization for Security Teams"
+  #   url: "https://medium.com/@yourusername/splunk-optimization"
+  #   platform: "Medium"
+  #   date: "2024-12"
+  #   description: "Tips and tricks for writing efficient Splunk queries for security monitoring."
+  #   tags: ["Splunk", "SIEM", "Performance"]
+  #   read_time: "7 min"
+
+# Blog Settings
+blog_settings:
+  show_platform: true       # Display the platform where posts are published
+  show_read_time: true      # Display estimated reading time
+  show_tags: true           # Display post tags
+  show_descriptions: true   # Display post descriptions
+  posts_per_page: 6        # Number of posts to display (for future pagination)
+  open_in_new_tab: true    # Open blog links in new tab
+
+# Call-to-Action (optional)
+# Displayed at the end of the blog section
+cta:
+  text: "Want to read more of my thoughts on cybersecurity?"
+  button_text: "Follow on Motion"
+  button_link: "https://motion.dev/@yourusername"  # Link to your blog profile
+
+# RSS Feed (optional)
+# If you have an RSS feed for your external blog
+# rss_feed: "https://your-blog.com/rss.xml"
+
+# Writing Topics (optional)
+# Topics you frequently write about
+# writing_topics:
+#   - "Cloud Security"
+#   - "Incident Response"
+#   - "HIPAA Compliance"
+#   - "Career Development"
+#   - "Security Tools"

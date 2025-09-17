@@ -1,0 +1,70 @@
+# Jekyll Configuration for Portfolio Site
+# GitHub Pages compatible configuration
+
+# Site settings
+title: "Bhumi Patel - Cybersecurity Portfolio"
+description: "Cybersecurity Graduate Student specializing in Cloud Security, Incident Response, and Compliance"
+url: "https://yourusername.github.io"
+baseurl: ""
+
+# Author information
+author:
+  name: "Bhumi Patel"
+  email: "you@example.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title/
+
+# Plugins (GitHub Pages safe)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  data:
+    output: false
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Include files
+include:
+  - _pages
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# SEO settings
+lang: en_US
+timezone: America/Chicago
+
+# Social media
+twitter:
+  username: yourusername
+  card: summary_large_image
+
+# GitHub Pages settings
+github:
+  repository_url: "https://github.com/yourusername/portfolio"

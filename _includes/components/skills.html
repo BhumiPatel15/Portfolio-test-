@@ -1,0 +1,40 @@
+<!-- Skills Section Component -->
+<div class="skills-content">
+  {% if site.data.skills.filters_enabled %}
+  <div class="skills-filters">
+    <button class="filter-btn active" data-filter="all">All Skills</button>
+    {% for category in site.data.skills.categories %}
+    <button class="filter-btn" data-filter="{{ category.name | slugify }}">{{ category.name }}</button>
+    {% endfor %}
+  </div>
+  {% endif %}
+  
+  <div class="skills-grid">
+    {% for category in site.data.skills.categories %}
+    <div class="skill-category" data-category="{{ category.name | slugify }}">
+      <h3 class="category-title">{{ category.name }}</h3>
+      <div class="skills-pills">
+        {% for skill in category.items %}
+        <span class="skill-pill{% if category.color %} skill-pill--{{ category.color }}{% endif %}">
+          {{ skill }}
+        </span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  {% if site.data.skills.proficiency_levels %}
+  <div class="proficiency-legend">
+    <h3 class="legend-title">Proficiency Levels</h3>
+    <div class="legend-items">
+      {% for level in site.data.skills.proficiency_levels %}
+      <div class="legend-item">
+        <span class="legend-indicator legend-{{ level[0] }}"></span>
+        <span class="legend-label">{{ level[0] | capitalize }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>

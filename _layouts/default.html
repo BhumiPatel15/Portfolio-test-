@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}" data-theme="{{ site.data.site.theme.default_mode | default: 'dark' }}">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  {% include header.html %}
+  
+  <main id="main-content" role="main" aria-label="Main content">
+    {{ content }}
+  </main>
+  
+  {% include footer.html %}
+  
+  <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+</body>
+</html>

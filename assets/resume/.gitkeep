@@ -1,0 +1,6 @@
+# Resume Directory
+# Place your resume PDF here as "Resume.pdf"
+# This file will be referenced by the download buttons throughout the site
+# 
+# The path is configured in _data/site.yml:
+# download_resume_path: "/assets/resume/Resume.pdf"

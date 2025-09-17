@@ -1,0 +1,83 @@
+<!-- Education Section Component -->
+<div class="education-content">
+  <div class="education-list">
+    {% for item in site.data.education.items %}
+    <div class="education-item">
+      {% if item.logo and site.data.education.education_settings.show_school_logos %}
+      <div class="school-logo">
+        <img src="{{ item.logo | relative_url }}" alt="{{ item.school }} logo" loading="lazy">
+      </div>
+      {% endif %}
+      
+      <div class="education-details">
+        <div class="education-header">
+          <h3 class="degree-title">{{ item.degree }}</h3>
+          <h4 class="school-name">{{ item.school }}</h4>
+          
+          <div class="education-meta">
+            {% if site.data.education.education_settings.show_location and item.location %}
+            <span class="education-location">{{ item.location }}</span>
+            {% endif %}
+            
+            <span class="education-duration">
+              {% assign start_date = item.start | date: "%b %Y" %}
+              {% if item.end == "Present" %}
+                {{ start_date }} - Present
+              {% else %}
+                {% assign end_date = item.end | date: "%b %Y" %}
+                {{ start_date }} - {{ end_date }}
+              {% endif %}
+            </span>
+            
+            {% if item.gpa and site.data.education.education_settings.show_gpa %}
+            <span class="education-gpa">GPA: {{ item.gpa }}</span>
+            {% endif %}
+          </div>
+        </div>
+        
+        {% if item.description %}
+        <p class="education-description">{{ item.description }}</p>
+        {% endif %}
+        
+        {% if item.highlights %}
+        <ul class="education-highlights">
+          {% for highlight in item.highlights %}
+          <li>{{ highlight }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  {% if site.data.education.academic_projects %}
+  <div class="academic-projects">
+    <h3 class="projects-title">Academic Projects</h3>
+    <div class="projects-list">
+      {% for project in site.data.education.academic_projects %}
+      <div class="academic-project">
+        <h4 class="project-name">{{ project.name }}</h4>
+        <p class="project-description">{{ project.description }}</p>
+        {% if project.technologies %}
+        <div class="project-tech">
+          {% include components/badges.html items=project.technologies %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  {% if site.data.education.honors_awards %}
+  <div class="honors-awards">
+    <h3 class="honors-title">Honors & Awards</h3>
+    <ul class="honors-list">
+      {% for honor in site.data.education.honors_awards %}
+      <li class="honor-item">{{ honor }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>

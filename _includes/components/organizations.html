@@ -1,0 +1,81 @@
+<!-- Organizations Section Component -->
+<div class="organizations-content">
+  <div class="organizations-list">
+    {% for item in site.data.orgs.items %}
+    <div class="organization-item">
+      {% if item.logo and site.data.orgs.org_settings.show_logos %}
+      <div class="org-logo">
+        <img src="{{ item.logo | relative_url }}" alt="{{ item.name }} logo" loading="lazy">
+      </div>
+      {% endif %}
+      
+      <div class="organization-details">
+        <div class="org-header">
+          <h3 class="org-name">{{ item.name }}</h3>
+          <span class="org-role">{{ item.role }}</span>
+          
+          {% if site.data.orgs.org_settings.show_duration %}
+          <span class="org-duration">
+            {% assign start_date = item.start | date: "%b %Y" %}
+            {% if item.end == "Present" %}
+              {{ start_date }} - Present
+            {% else %}
+              {% assign end_date = item.end | date: "%b %Y" %}
+              {{ start_date }} - {{ end_date }}
+            {% endif %}
+          </span>
+          {% endif %}
+        </div>
+        
+        {% if item.description %}
+        <p class="org-description">{{ item.description }}</p>
+        {% endif %}
+        
+        {% if item.activities %}
+        <ul class="org-activities">
+          {% for activity in item.activities %}
+          <li>{{ activity }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        
+        {% if item.website and site.data.orgs.org_settings.show_websites %}
+        <div class="org-website">
+          <a href="{{ item.website }}" 
+             class="org-link"
+             target="_blank" 
+             rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-external"></use>
+            </svg>
+            Visit Website
+          </a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  {% if site.data.orgs.professional_memberships %}
+  <div class="professional-memberships">
+    <h3 class="memberships-title">Professional Memberships</h3>
+    <div class="memberships-list">
+      {% for membership in site.data.orgs.professional_memberships %}
+      <div class="membership-item">
+        <h4 class="membership-name">{{ membership.name }}</h4>
+        <span class="membership-type">{{ membership.membership_type }}</span>
+        <span class="membership-date">Since {{ membership.start | date: "%b %Y" }}</span>
+        {% if membership.benefits %}
+        <ul class="membership-benefits">
+          {% for benefit in membership.benefits %}
+          <li>{{ benefit }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>

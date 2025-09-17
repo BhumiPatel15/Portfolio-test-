@@ -1,0 +1,80 @@
+# Global site settings (YAML-only updates. Do not edit HTML.)
+# This file controls the main site identity, navigation, and social links
+
+# Personal Information
+name: "Bhumi Patel"
+role: "Cybersecurity Graduate Student"
+tagline: "Cloud Security • Incident Response • Compliance"
+
+# Resume/CV Download Path
+# Place your resume PDF in assets/resume/ and update this path
+download_resume_path: "/assets/resume/Resume.pdf"
+
+# Contact Information
+primary_email: "you@example.com"
+location: "Chicago, IL, USA"
+
+# SEO & Meta Information
+seo:
+  title: "Bhumi Patel - Cybersecurity Portfolio"
+  description: "Cybersecurity Graduate Student specializing in Cloud Security, Incident Response, and Compliance"
+  keywords: "cybersecurity, cloud security, incident response, HIPAA, AWS, compliance"
+  image: "/assets/img/social-preview.jpg"  # 1200x630px for social media
+
+# Header Navigation (order matters - sections will appear in this order)
+# Remove or comment out sections you don't want in navigation
+nav:
+  - label: "About"
+    href: "#about"
+  - label: "Skills"
+    href: "#skills"
+  - label: "Experience"
+    href: "#experience"
+  - label: "Education"
+    href: "#education"
+  - label: "Projects"
+    href: "#projects"
+  - label: "Organizations"
+    href: "#orgs"
+  - label: "Volunteer"
+    href: "#volunteer"
+  - label: "Certificates"
+    href: "#certs"
+  - label: "Blog"
+    href: "#blog"
+  - label: "Contact"
+    href: "#contact"
+
+# Social Media Links
+# Icons are rendered as inline SVGs - supported: linkedin, github, twitter, mail, website
+socials:
+  - label: "LinkedIn"
+    icon: "linkedin"
+    url: "https://www.linkedin.com/in/yourusername"
+  - label: "GitHub"
+    icon: "github"
+    url: "https://github.com/yourusername"
+  - label: "Email"
+    icon: "mail"
+    url: "mailto:you@example.com"
+  # - label: "Twitter"
+  #   icon: "twitter"
+  #   url: "https://twitter.com/yourusername"
+  # - label: "Website"
+  #   icon: "website"
+  #   url: "https://yourblog.com"
+
+# Theme Settings
+theme:
+  default_mode: "dark"  # "dark" or "light"
+  allow_toggle: true    # set to false to disable theme switching
+
+# Analytics (optional)
+# analytics:
+#   google_analytics: "G-XXXXXXXXXX"
+
+# Footer Settings
+footer:
+  show_year: true
+  privacy_policy_url: ""  # leave empty to hide privacy policy link
+  copyright_notice: "This site is personal. Do not copy or reuse without permission."

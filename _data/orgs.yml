@@ -1,0 +1,60 @@
+# Organizations & Student Organizations Section
+# This section displays your involvement in professional and student organizations
+
+# Organization Items
+items:
+  - name: "Girls Who Code - Roosevelt University"
+    role: "President"
+    start: "2024-08"  # Format: YYYY-MM
+    end: "Present"    # Use "Present" for ongoing roles
+    description: "Leading university chapter focused on increasing diversity in technology and cybersecurity fields."
+    activities:
+      - "Organize weekly coding workshops and cybersecurity awareness sessions"
+      - "Host portfolio review nights and technical interview preparation"
+      - "Coordinate Arduino and hardware security project workshops"
+      - "Manage chapter of 25+ active members and collaborate with industry mentors"
+    website: "https://girlswhocode.com"  # Optional organization website
+    # logo: "/assets/img/logos/girls-who-code.png"
+
+  - name: "Women in Cybersecurity (WiCyS) - Roosevelt University"
+    role: "Active Member"
+    start: "2024-08"
+    end: "Present"
+    description: "Professional development and networking organization for women in cybersecurity."
+    activities:
+      - "Participate in monthly professional development workshops"
+      - "Attend industry networking events and career fairs"
+      - "Volunteer at local cybersecurity conferences and events"
+      - "Mentor incoming cybersecurity students"
+    website: "https://www.wicys.org"
+    # logo: "/assets/img/logos/wicys.png"
+
+  # Example of additional organization (commented out)
+  # - name: "Cybersecurity Student Association"
+  #   role: "Vice President"
+  #   start: "2024-01"
+  #   end: "2024-12"
+  #   description: "Student-led organization promoting cybersecurity education and career development."
+  #   activities:
+  #     - "Organized guest speaker series with industry professionals"
+  #     - "Coordinated hands-on lab sessions and CTF competitions"
+  #     - "Managed social media presence and member communications"
+  #   website: "https://example.edu/cybersecurity-club"
+
+# Professional Memberships (optional)
+# professional_memberships:
+#   - name: "Information Systems Security Association (ISSA)"
+#     membership_type: "Student Member"
+#     start: "2024-09"
+#     benefits: ["Access to professional resources", "Networking opportunities", "Industry publications"]
+#   
+#   - name: "International Association of Computer Science and Information Technology (IACSIT)"
+#     membership_type: "Student Member" 
+#     start: "2024-10"
+
+# Settings
+org_settings:
+  show_logos: false        # Set to true if you add organization logos
+  show_websites: true      # Display organization website links
+  show_duration: true      # Calculate and display involvement duration
+  group_by_type: false     # Group organizations by type (student vs professional)

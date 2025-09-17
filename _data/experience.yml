@@ -1,0 +1,53 @@
+# Work Experience Section
+# This section displays your professional experience as a vertical timeline
+
+# Experience Items
+# Listed in reverse chronological order (most recent first)
+items:
+  - company: "SAFE Coalition for Human Rights"
+    role: "Cybersecurity & Compliance Intern"
+    location: "Chicago, IL"
+    start: "2025-05"  # Format: YYYY-MM
+    end: "2025-07"    # Use "Present" for current positions
+    description: "Internship focused on implementing HIPAA-compliant security architecture for NGO healthcare applications."
+    bullets:
+      - "Designed and implemented HIPAA/HITRUST-compliant security architecture on AWS for healthcare applications"
+      - "Established comprehensive logging and monitoring systems using CloudWatch and CloudTrail"
+      - "Developed incident response runbooks and conducted security awareness training for stakeholders"
+      - "Created security documentation and compliance mapping for audit readiness"
+    skills: ["AWS", "HIPAA", "HITRUST", "Incident Response", "Confluence", "Jira", "CloudWatch"]
+    # Optional: company logo
+    # logo: "/assets/img/logos/safe-coalition.png"
+
+  - company: "eClinicalWorks"
+    role: "Security IT Specialist"
+    location: "Ahmedabad, India"
+    start: "2022-01"
+    end: "2023-06"
+    description: "Security operations role supporting SIEM infrastructure and incident response for healthcare IT systems."
+    bullets:
+      - "Maintained and optimized Splunk SIEM dashboards for real-time security monitoring"
+      - "Provided 24/7 on-call support for security incident triage and initial response"
+      - "Collaborated with security team on threat detection rule development and tuning"
+      - "Supported vulnerability management and patch deployment processes"
+    skills: ["Splunk", "SIEM", "On-call Support", "Linux", "Vulnerability Management", "Healthcare IT"]
+    # logo: "/assets/img/logos/eclinicalworks.png"
+
+  # Example of additional experience entry (commented out)
+  # - company: "Previous Company"
+  #   role: "Junior Security Analyst"
+  #   location: "City, State"
+  #   start: "2021-06"
+  #   end: "2021-12"
+  #   description: "Brief description of the role and company."
+  #   bullets:
+  #     - "Key achievement or responsibility"
+  #     - "Another important contribution"
+  #   skills: ["Skill1", "Skill2", "Skill3"]
+
+# Timeline Settings
+timeline_settings:
+  show_duration: true      # Calculate and display duration for each role
+  show_location: true      # Display location for each position
+  show_company_logos: false # Set to true if you add company logos
+  date_format: "MMM YYYY"  # How dates are displayed (e.g., "May 2025")

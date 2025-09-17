@@ -1,0 +1,41 @@
+<!-- About Section Component -->
+<div class="about-content">
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="about-summary">
+        {{ site.data.about.summary | markdownify }}
+      </div>
+      
+      {% if site.data.about.highlights %}
+      <div class="about-highlights">
+        <h3 class="highlights-title">Key Highlights</h3>
+        <ul class="highlights-list">
+          {% for highlight in site.data.about.highlights %}
+          <li class="highlight-item">{{ highlight }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      
+      {% if site.data.about.personal_notes %}
+      <div class="about-personal">
+        <h3 class="personal-title">Personal Notes</h3>
+        <ul class="personal-list">
+          {% for note in site.data.about.personal_notes %}
+          <li class="personal-item">{{ note }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+    
+    {% if site.data.about.image %}
+    <div class="about-image">
+      <img src="{{ site.data.about.image | relative_url }}" 
+           alt="{{ site.data.about.image_alt | default: 'About ' | append: site.data.site.name }}"
+           class="about-photo"
+           loading="lazy">
+    </div>
+    {% endif %}
+  </div>
+</div>

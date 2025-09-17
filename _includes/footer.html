@@ -1,0 +1,31 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <p class="footer-text">
+          © {% if site.data.site.footer.show_year %}{{ 'now' | date: "%Y" }}{% endif %} {{ site.data.site.name }}. 
+          {{ site.data.site.footer.copyright_notice }}
+        </p>
+        {% if site.data.site.footer.privacy_policy_url %}
+        <p class="footer-links">
+          <a href="{{ site.data.site.footer.privacy_policy_url }}" class="footer-link">Privacy Policy</a>
+        </p>
+        {% endif %}
+      </div>
+      
+      <div class="footer-social">
+        {% for social in site.data.site.socials %}
+        <a href="{{ social.url }}" 
+           class="social-link" 
+           aria-label="{{ social.label }}"
+           target="_blank" 
+           rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-{{ social.icon }}"></use>
+          </svg>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</footer>

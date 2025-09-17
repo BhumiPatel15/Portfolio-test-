@@ -1,0 +1,79 @@
+<!-- Timeline Component for Experience -->
+<div class="timeline-container">
+  <div class="timeline">
+    {% for item in site.data.experience.items %}
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          {% if item.logo and site.data.experience.timeline_settings.show_company_logos %}
+          <div class="company-logo">
+            <img src="{{ item.logo | relative_url }}" alt="{{ item.company }} logo" loading="lazy">
+          </div>
+          {% endif %}
+          
+          <div class="timeline-meta">
+            <h3 class="job-title">{{ item.role }}</h3>
+            <h4 class="company-name">{{ item.company }}</h4>
+            
+            <div class="job-details">
+              {% if site.data.experience.timeline_settings.show_location and item.location %}
+              <span class="job-location">{{ item.location }}</span>
+              {% endif %}
+              
+              <span class="job-duration">
+                {% assign start_date = item.start | date: site.data.experience.timeline_settings.date_format | default: "%b %Y" %}
+                {% if item.end == "Present" %}
+                  {{ start_date }} - Present
+                {% else %}
+                  {% assign end_date = item.end | date: site.data.experience.timeline_settings.date_format | default: "%b %Y" %}
+                  {{ start_date }} - {{ end_date }}
+                {% endif %}
+                
+                {% if site.data.experience.timeline_settings.show_duration %}
+                  {% assign start_year = item.start | date: "%Y" | plus: 0 %}
+                  {% assign start_month = item.start | date: "%m" | plus: 0 %}
+                  
+                  {% if item.end == "Present" %}
+                    {% assign end_year = "now" | date: "%Y" | plus: 0 %}
+                    {% assign end_month = "now" | date: "%m" | plus: 0 %}
+                  {% else %}
+                    {% assign end_year = item.end | date: "%Y" | plus: 0 %}
+                    {% assign end_month = item.end | date: "%m" | plus: 0 %}
+                  {% endif %}
+                  
+                  {% assign total_months = end_year | minus: start_year | times: 12 | plus: end_month | minus: start_month %}
+                  {% assign years = total_months | divided_by: 12 %}
+                  {% assign months = total_months | modulo: 12 %}
+                  
+                  <span class="duration-calc">
+                    ({% if years > 0 %}{{ years }} yr{% if years > 1 %}s{% endif %}{% endif %}{% if years > 0 and months > 0 %} {% endif %}{% if months > 0 %}{{ months }} mo{% if months > 1 %}s{% endif %}{% endif %})
+                  </span>
+                {% endif %}
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        {% if item.description %}
+        <p class="job-description">{{ item.description }}</p>
+        {% endif %}
+        
+        {% if item.bullets %}
+        <ul class="job-achievements">
+          {% for bullet in item.bullets %}
+          <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        
+        {% if item.skills %}
+        <div class="job-skills">
+          {% include components/badges.html items=item.skills %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

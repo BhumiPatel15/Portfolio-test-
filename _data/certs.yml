@@ -1,0 +1,78 @@
+# Certificates & Achievements Section
+# This section displays your professional certifications and achievements
+
+# Certifications
+items:
+  - name: "CompTIA Security+"
+    issuer: "CompTIA"
+    status: "In Progress"  # "Earned", "In Progress", "Planned"
+    date: "2025-10"       # Format: YYYY-MM (target date for in progress/planned)
+    # earned_date: "2025-10-15"  # Use this for earned certifications (YYYY-MM-DD)
+    credential_id: ""     # Add credential ID when earned
+    description: "Foundational cybersecurity certification covering network security, compliance, and risk management."
+    skills_covered: ["Network Security", "Risk Management", "Cryptography", "Identity Management"]
+    # verification_url: "https://www.certmetrics.com/comptia/public/verification.aspx"
+
+  - name: "ISC2 Certified in Cybersecurity (CC)"
+    issuer: "ISC2"
+    status: "Earned"
+    earned_date: "2025-08-15"
+    credential_id: "CC-1234567"
+    description: "Entry-level cybersecurity certification demonstrating foundational knowledge in security principles."
+    skills_covered: ["Security Principles", "Business Continuity", "Access Controls", "Network Security"]
+    verification_url: "https://www.isc2.org/Certifications/CC"
+
+  # Example of additional certifications (commented out)
+  # - name: "AWS Certified Security - Specialty"
+  #   issuer: "Amazon Web Services"
+  #   status: "Planned"
+  #   date: "2026-03"
+  #   description: "Advanced AWS security certification focusing on cloud security architecture and compliance."
+  #   skills_covered: ["AWS Security", "Cloud Architecture", "Compliance", "Incident Response"]
+  
+  # - name: "Certified Information Systems Security Professional (CISSP)"
+  #   issuer: "ISC2"
+  #   status: "Planned"
+  #   date: "2027-06"
+  #   description: "Advanced cybersecurity certification for experienced professionals."
+  #   prerequisites: ["5 years experience required"]
+
+# Professional Achievements
+achievements:
+  - title: "Dean's List"
+    organization: "Roosevelt University"
+    date: "2024-12"
+    description: "Academic excellence recognition for Fall 2024 semester"
+    
+  - title: "Outstanding Leadership Award"
+    organization: "Girls Who Code - Roosevelt University"
+    date: "2025-05"
+    description: "Recognition for exceptional leadership in promoting diversity in technology"
+
+  - title: "Cybersecurity Excellence Scholarship"
+    organization: "Roosevelt University"
+    date: "2024-08"
+    description: "Merit-based scholarship for academic achievement and cybersecurity focus"
+    amount: "$5,000"  # Optional: include scholarship amount
+
+# Academic Honors (optional)
+# academic_honors:
+#   - "Magna Cum Laude Graduate"
+#   - "Phi Kappa Phi Honor Society Member"
+#   - "Outstanding Student in Cybersecurity Program"
+
+# Professional Recognition (optional)
+# professional_recognition:
+#   - title: "Rising Star in Cybersecurity"
+#     organization: "WiCyS Chicago Chapter"
+#     year: "2025"
+#     description: "Recognition for contributions to cybersecurity community"
+
+# Settings
+cert_settings:
+  show_in_progress: true      # Display certifications in progress
+  show_planned: true          # Display planned certifications
+  show_credential_ids: true   # Display credential IDs when available
+  show_verification_links: true # Display verification URLs
+  group_by_status: false      # Group certifications by status (earned/in progress/planned)
+  show_skills_covered: true   # Display skills covered by each certification

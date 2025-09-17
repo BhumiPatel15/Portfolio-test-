@@ -1,0 +1,73 @@
+<!-- Projects Section Component -->
+<div class="projects-content">
+  <div class="projects-grid">
+    {% for project in site.data.projects.cards %}
+    <div class="project-card{% if project.featured %} project-card--featured{% endif %}">
+      {% if project.image and site.data.projects.project_settings.show_images %}
+      <div class="project-image">
+        <img src="{{ project.image | relative_url }}" 
+             alt="{{ project.name }} screenshot"
+             loading="lazy">
+      </div>
+      {% endif %}
+      
+      <div class="project-content">
+        <div class="project-header">
+          <h3 class="project-name">{{ project.name }}</h3>
+          {% if project.featured %}
+          <span class="featured-badge" aria-label="Featured project">★</span>
+          {% endif %}
+        </div>
+        
+        <p class="project-blurb">{{ project.blurb }}</p>
+        
+        {% if project.description %}
+        <div class="project-description">
+          {{ project.description | markdownify }}
+        </div>
+        {% endif %}
+        
+        {% if project.tech and site.data.projects.project_settings.show_tech_badges %}
+        <div class="project-tech">
+          {% include components/badges.html items=project.tech %}
+        </div>
+        {% endif %}
+        
+        {% if project.tags and site.data.projects.project_settings.show_project_tags %}
+        <div class="project-tags">
+          {% for tag in project.tags %}
+          <span class="project-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        {% if project.links %}
+        <div class="project-links">
+          {% for link in project.links %}
+          <a href="{{ link.url }}" 
+             class="project-link"
+             target="_blank" 
+             rel="noopener noreferrer"
+             aria-label="{{ link.label }} for {{ project.name }}">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-{{ link.icon | default: 'external' }}"></use>
+            </svg>
+            {{ link.label }}
+          </a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  {% if site.data.projects.cta %}
+  <div class="projects-cta">
+    <p class="cta-text">{{ site.data.projects.cta.text }}</p>
+    <a href="{{ site.data.projects.cta.button_link }}" class="btn btn-secondary">
+      {{ site.data.projects.cta.button_text }}
+    </a>
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,115 @@
+<!-- Contact Section Component -->
+<div class="contact-content">
+  <div class="contact-grid">
+    <div class="contact-info">
+      {% if site.data.contact.cta %}
+      <div class="contact-intro">
+        <h3 class="contact-title">{{ site.data.contact.cta.title }}</h3>
+        <p class="contact-description">{{ site.data.contact.cta.description }}</p>
+      </div>
+      {% endif %}
+      
+      <div class="contact-methods">
+        {% for method in site.data.contact.contact_methods %}
+        <div class="contact-method{% if method.primary %} contact-method--primary{% endif %}">
+          <a href="{{ method.href }}" 
+             class="contact-link"
+             {% if method.href contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-{{ method.icon }}"></use>
+            </svg>
+            <div class="contact-details">
+              <span class="contact-label">{{ method.label }}</span>
+              <span class="contact-value">{{ method.value }}</span>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      
+      {% if site.data.contact.availability and site.data.contact.contact_settings.show_availability %}
+      <div class="availability-status availability-status--{{ site.data.contact.availability.status }}">
+        <div class="status-indicator"></div>
+        <span class="status-message">{{ site.data.contact.availability.message }}</span>
+      </div>
+      {% endif %}
+      
+      {% if site.data.contact.contact_settings.show_response_time %}
+      <div class="response-time">
+        <span class="response-label">Response time:</span>
+        <span class="response-value">{{ site.data.contact.contact_settings.response_time }}</span>
+      </div>
+      {% endif %}
+      
+      <div class="social-links">
+        {% for social in site.data.contact.social_links %}
+        <a href="{{ social.url }}" 
+           class="social-link"
+           aria-label="{{ social.label }}"
+           target="_blank" 
+           rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-{{ social.icon }}"></use>
+          </svg>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    
+    {% if site.data.contact.contact_form.enabled and site.data.contact.contact_form.formspree_endpoint %}
+    <div class="contact-form-container">
+      <form class="contact-form" 
+            action="{{ site.data.contact.contact_form.formspree_endpoint }}" 
+            method="POST">
+        <h3 class="form-title">{{ site.data.contact.contact_form.title }}</h3>
+        {% if site.data.contact.contact_form.description %}
+        <p class="form-description">{{ site.data.contact.contact_form.description }}</p>
+        {% endif %}
+        
+        {% for field in site.data.contact.contact_form.fields %}
+        <div class="form-group">
+          <label for="{{ field.name }}" class="form-label">
+            {{ field.label }}{% if field.required %} *{% endif %}
+          </label>
+          
+          {% if field.type == 'textarea' %}
+          <textarea id="{{ field.name }}" 
+                    name="{{ field.name }}" 
+                    class="form-control"
+                    placeholder="{{ field.placeholder }}"
+                    {% if field.required %}required{% endif %}
+                    {% if field.rows %}rows="{{ field.rows }}"{% endif %}></textarea>
+          {% else %}
+          <input type="{{ field.type }}" 
+                 id="{{ field.name }}" 
+                 name="{{ field.name }}" 
+                 class="form-control"
+                 placeholder="{{ field.placeholder }}"
+                 {% if field.required %}required{% endif %}>
+          {% endif %}
+        </div>
+        {% endfor %}
+        
+        <button type="submit" class="btn btn-primary">
+          {{ site.data.contact.contact_form.submit_button_text }}
+        </button>
+        
+        <div class="form-messages">
+          <div class="form-success" style="display: none;">
+            {{ site.data.contact.contact_form.success_message }}
+          </div>
+          <div class="form-error" style="display: none;">
+            {{ site.data.contact.contact_form.error_message }}
+          </div>
+        </div>
+      </form>
+    </div>
+    {% endif %}
+  </div>
+  
+  {% if site.data.contact.privacy_note %}
+  <div class="privacy-note">
+    <small>{{ site.data.contact.privacy_note }}</small>
+  </div>
+  {% endif %}
+</div>

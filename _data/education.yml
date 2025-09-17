@@ -1,0 +1,51 @@
+# Education Section
+# This section displays your educational background
+
+# Education Items
+# Listed in reverse chronological order (most recent first)
+items:
+  - school: "Roosevelt University"
+    degree: "Master of Science in Cybersecurity"
+    location: "Chicago, IL"
+    start: "2024-08"  # Format: YYYY-MM
+    end: "2026-08"    # Use "Present" for ongoing programs
+    gpa: ""           # Optional: add GPA if you want to display it
+    description: "Comprehensive cybersecurity program focusing on cloud security, incident response, and compliance frameworks."
+    highlights:
+      - "Relevant Coursework: Cloud Security, Digital Forensics, Risk Management, Compliance"
+      - "Active member of Women in Cybersecurity (WiCyS) Roosevelt University chapter"
+      - "President of Girls Who Code Roosevelt University chapter"
+      - "Focus areas: Healthcare security, AWS cloud architecture, HIPAA compliance"
+    # Optional: school logo
+    # logo: "/assets/img/logos/roosevelt-university.png"
+
+  # Example of additional education entry (commented out)
+  # - school: "Previous University"
+  #   degree: "Bachelor of Science in Information Technology"
+  #   location: "City, State"
+  #   start: "2018-08"
+  #   end: "2022-05"
+  #   gpa: "3.8/4.0"  # Optional
+  #   description: "Undergraduate program with focus on information systems and security."
+  #   highlights:
+  #     - "Magna Cum Laude graduate"
+  #     - "Relevant Coursework: Network Security, Database Management, Systems Administration"
+  #     - "Senior Capstone: Implemented secure authentication system"
+  #   # logo: "/assets/img/logos/previous-university.png"
+
+# Additional Academic Information (optional)
+# academic_projects:
+#   - name: "Secure Healthcare Data Pipeline"
+#     description: "Designed HIPAA-compliant data processing system using AWS services"
+#     technologies: ["AWS", "Python", "Encryption"]
+#   
+# honors_awards:
+#   - "Dean's List - Fall 2024, Spring 2025"
+#   - "Cybersecurity Excellence Scholarship Recipient"
+#   - "Outstanding Leadership Award - Girls Who Code"
+
+# Settings
+education_settings:
+  show_gpa: false          # Set to true to display GPA when provided
+  show_school_logos: false # Set to true if you add school logos
+  show_location: true      # Display location for each institution

@@ -1,0 +1,78 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- SEO Meta Tags -->
+{% seo %}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.site.name }}">
+<meta property="og:description" content="{{ site.data.site.seo.description }}">
+<meta property="og:image" content="{{ site.data.site.seo.image | absolute_url }}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ page.url | absolute_url }}">
+<meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.site.name }}">
+<meta property="twitter:description" content="{{ site.data.site.seo.description }}">
+<meta property="twitter:image" content="{{ site.data.site.seo.image | absolute_url }}">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="{{ '/assets/img/favicon.ico' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+
+<!-- Preconnect to external domains -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "{{ site.data.site.name }}",
+      "jobTitle": "{{ site.data.site.role }}",
+      "description": "{{ site.data.site.tagline }}",
+      "email": "{{ site.data.site.primary_email }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ site.data.site.location }}"
+      },
+      "sameAs": [
+        {% for social in site.data.site.socials %}
+        "{{ social.url }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
+      "url": "{{ site.url }}{{ site.baseurl }}"
+    },
+    {
+      "@type": "WebSite",
+      "name": "{{ site.data.site.seo.title }}",
+      "description": "{{ site.data.site.seo.description }}",
+      "url": "{{ site.url }}{{ site.baseurl }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.data.site.name }}"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Preload critical resources -->
+<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
+<link rel="preload" href="{{ '/assets/js/theme.js' | relative_url }}" as="script">

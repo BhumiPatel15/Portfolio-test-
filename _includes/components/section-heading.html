@@ -1,0 +1,7 @@
+<!-- Section Heading Component -->
+<div class="section-heading">
+  <h2 class="section-title" id="{{ include.title | slugify }}-heading">{{ include.title }}</h2>
+  {% if include.subtitle %}
+  <p class="section-subtitle">{{ include.subtitle }}</p>
+  {% endif %}
+</div>

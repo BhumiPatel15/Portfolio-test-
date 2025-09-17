@@ -1,0 +1,71 @@
+# Volunteer Work & Conferences Section
+# This section displays your volunteer activities and conference participation
+
+# Volunteer Activities
+items:
+  - event: "DFIR Workshop - Hands-on Digital Forensics"
+    org: "Chicago Cybersecurity Meetup"
+    role: "Volunteer Coordinator"
+    date: "2025-04"  # Format: YYYY-MM or YYYY-MM-DD
+    location: "Chicago, IL"
+    description: "Assisted with registration and provided technical support for hands-on digital forensics workshop."
+    activities:
+      - "Managed event registration and attendee check-in process"
+      - "Provided technical support during hands-on lab sessions"
+      - "Assisted participants with forensics tool setup and troubleshooting"
+      - "Helped coordinate networking session and Q&A with industry experts"
+    skills_used: ["Event Management", "Technical Support", "Digital Forensics Tools"]
+    # website: "https://chicagocybersecurity.org"
+
+  - event: "SecureWorld Chicago Conference"
+    org: "SecureWorld"
+    role: "Student Volunteer"
+    date: "2024-11"
+    location: "Chicago, IL"
+    description: "Supported conference operations and attended sessions on cloud security and compliance."
+    activities:
+      - "Assisted with attendee registration and information desk"
+      - "Supported speaker coordination and session logistics"
+      - "Participated in student networking sessions"
+      - "Attended workshops on AWS security and HIPAA compliance"
+    skills_used: ["Event Support", "Professional Networking"]
+    # website: "https://secureworldexpo.com/chicago"
+
+  # Example of additional volunteer work (commented out)
+  # - event: "CyberSeek Career Fair"
+  #   org: "National Initiative for Cybersecurity Careers and Studies"
+  #   role: "Student Ambassador"
+  #   date: "2024-10"
+  #   location: "Virtual"
+  #   description: "Represented Roosevelt University at virtual cybersecurity career fair."
+  #   activities:
+  #     - "Provided information about cybersecurity education programs"
+  #     - "Assisted prospective students with program selection"
+  #     - "Shared experiences about transitioning into cybersecurity field"
+  #   skills_used: ["Public Speaking", "Student Mentoring"]
+
+# Conference Attendance (optional)
+# conferences_attended:
+#   - name: "BSides Chicago"
+#     year: "2024"
+#     role: "Attendee"
+#     highlights: ["Cloud Security Track", "Incident Response Workshop"]
+#   
+#   - name: "ISACA Chicago Security Conference"
+#     year: "2024"
+#     role: "Student Attendee"
+#     highlights: ["Compliance Frameworks", "Risk Management"]
+
+# Community Involvement (optional)
+# community_service:
+#   - organization: "Local High School"
+#     activity: "Cybersecurity Awareness Presentations"
+#     frequency: "Monthly"
+#     description: "Present cybersecurity basics and career paths to high school students"
+
+# Settings
+volunteer_settings:
+  show_skills_used: true    # Display skills utilized in volunteer work
+  show_locations: true      # Display event/activity locations
+  group_by_year: false      # Group activities by year
+  show_websites: false      # Display organization websites when available

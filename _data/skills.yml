@@ -1,0 +1,77 @@
+# Skills Section
+# This section displays your technical skills as filterable pill chips
+
+# Enable/disable filtering functionality
+filters_enabled: true
+
+# Skill Categories
+# Each category will have its own filter button
+# Skills within categories are displayed as pill chips/badges
+categories:
+  - name: "Cloud & Security"
+    color: "blue"  # optional: blue, green, purple, orange, red
+    items:
+      - "AWS"
+      - "IAM"
+      - "Cognito"
+      - "CloudWatch"
+      - "GuardDuty"
+      - "KMS"
+      - "CloudTrail"
+      - "Security Groups"
+      - "VPC"
+
+  - name: "Blue Team & IR"
+    color: "green"
+    items:
+      - "Splunk"
+      - "Sigma Rules"
+      - "Threat Hunting"
+      - "Incident Response"
+      - "Playbook Development"
+      - "SIEM"
+      - "Log Analysis"
+      - "Forensics"
+
+  - name: "Development & Scripting"
+    color: "purple"
+    items:
+      - "Python"
+      - "Bash"
+      - "Git"
+      - "CI/CD"
+      - "React"
+      - "JavaScript"
+      - "SQL"
+      - "Linux"
+
+  - name: "Compliance & Frameworks"
+    color: "orange"
+    items:
+      - "HIPAA"
+      - "HITRUST"
+      - "NIST"
+      - "SOC 2"
+      - "Risk Assessment"
+      - "Audit Support"
+      - "Policy Development"
+
+  - name: "Tools & Platforms"
+    color: "red"
+    items:
+      - "Jira"
+      - "Confluence"
+      - "Wireshark"
+      - "Nmap"
+      - "Burp Suite"
+      - "Metasploit"
+      - "Docker"
+      - "Terraform"
+
+# Optional: Skill Proficiency Levels
+# Uncomment and customize if you want to show proficiency levels
+# proficiency_levels:
+#   expert: ["AWS", "Python", "Incident Response"]
+#   advanced: ["Splunk", "HIPAA", "Linux"]
+#   intermediate: ["React", "Docker", "Terraform"]
+#   beginner: ["Metasploit", "Burp Suite"]

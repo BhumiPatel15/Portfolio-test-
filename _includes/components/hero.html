@@ -1,0 +1,48 @@
+<!-- Hero Section Component -->
+<section class="hero-section" aria-labelledby="hero-heading">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        {% if site.data.intro.image %}
+        <div class="hero-image">
+          <img src="{{ site.data.intro.image | relative_url }}" 
+               alt="{{ site.data.intro.image_alt | default: site.data.intro.name }}"
+               class="hero-photo"
+               loading="eager">
+        </div>
+        {% endif %}
+        
+        <h1 class="hero-name" id="hero-heading">{{ site.data.intro.name }}</h1>
+        <h2 class="hero-title">{{ site.data.intro.title }}</h2>
+        <p class="hero-tagline">{{ site.data.intro.tagline }}</p>
+        
+        {% if site.data.intro.intro_text %}
+        <div class="hero-intro">
+          {{ site.data.intro.intro_text | markdownify }}
+        </div>
+        {% endif %}
+        
+        <div class="hero-actions">
+          {% for cta in site.data.intro.ctas %}
+          <a href="{{ cta.href | relative_url }}" 
+             class="btn btn-{{ cta.style }}"
+             {% if cta.download %}download{% endif %}
+             {% if cta.href contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {% if cta.style == 'primary' and cta.download %}
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-download"></use>
+            </svg>
+            {% endif %}
+            {{ cta.label }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-arrow"></div>
+  </div>
+</section>

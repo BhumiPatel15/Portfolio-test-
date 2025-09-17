@@ -1,0 +1,123 @@
+<!-- Certificates Section Component -->
+<div class="certificates-content">
+  <div class="certificates-list">
+    {% for item in site.data.certs.items %}
+    <div class="certificate-item certificate-item--{{ item.status }}">
+      <div class="certificate-details">
+        <div class="certificate-header">
+          <h3 class="cert-name">{{ item.name }}</h3>
+          <span class="cert-issuer">{{ item.issuer }}</span>
+          
+          <div class="cert-meta">
+            <span class="cert-status cert-status--{{ item.status }}">
+              {% case item.status %}
+                {% when 'earned' %}✓ Earned
+                {% when 'in_progress' %}🔄 In Progress
+                {% when 'planned' %}📅 Planned
+              {% endcase %}
+            </span>
+            
+            <span class="cert-date">
+              {% if item.status == 'earned' and item.earned_date %}
+                {{ item.earned_date | date: "%b %Y" }}
+              {% else %}
+                {{ item.date | date: "%b %Y" }}
+              {% endif %}
+            </span>
+          </div>
+        </div>
+        
+        {% if item.description %}
+        <p class="cert-description">{{ item.description }}</p>
+        {% endif %}
+        
+        {% if item.skills_covered and site.data.certs.cert_settings.show_skills_covered %}
+        <div class="cert-skills">
+          <span class="skills-label">Skills Covered:</span>
+          {% include components/badges.html items=item.skills_covered %}
+        </div>
+        {% endif %}
+        
+        {% if item.prerequisites %}
+        <div class="cert-prerequisites">
+          <span class="prereq-label">Prerequisites:</span>
+          <ul class="prereq-list">
+            {% for prereq in item.prerequisites %}
+            <li>{{ prereq }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        
+        <div class="cert-actions">
+          {% if item.credential_id and site.data.certs.cert_settings.show_credential_ids %}
+          <span class="credential-id">ID: {{ item.credential_id }}</span>
+          {% endif %}
+          
+          {% if item.verification_url and site.data.certs.cert_settings.show_verification_links %}
+          <a href="{{ item.verification_url }}" 
+             class="verify-link"
+             target="_blank" 
+             rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-external"></use>
+            </svg>
+            Verify
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  {% if site.data.certs.achievements %}
+  <div class="achievements-section">
+    <h3 class="achievements-title">Professional Achievements</h3>
+    <div class="achievements-list">
+      {% for achievement in site.data.certs.achievements %}
+      <div class="achievement-item">
+        <h4 class="achievement-title">{{ achievement.title }}</h4>
+        <span class="achievement-org">{{ achievement.organization }}</span>
+        <span class="achievement-date">{{ achievement.date | date: "%b %Y" }}</span>
+        {% if achievement.description %}
+        <p class="achievement-description">{{ achievement.description }}</p>
+        {% endif %}
+        {% if achievement.amount %}
+        <span class="achievement-amount">{{ achievement.amount }}</span>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  {% if site.data.certs.academic_honors %}
+  <div class="academic-honors">
+    <h3 class="honors-title">Academic Honors</h3>
+    <ul class="honors-list">
+      {% for honor in site.data.certs.academic_honors %}
+      <li class="honor-item">{{ honor }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  
+  {% if site.data.certs.professional_recognition %}
+  <div class="professional-recognition">
+    <h3 class="recognition-title">Professional Recognition</h3>
+    <div class="recognition-list">
+      {% for recognition in site.data.certs.professional_recognition %}
+      <div class="recognition-item">
+        <h4 class="recognition-title">{{ recognition.title }}</h4>
+        <span class="recognition-org">{{ recognition.organization }}</span>
+        <span class="recognition-year">{{ recognition.year }}</span>
+        {% if recognition.description %}
+        <p class="recognition-description">{{ recognition.description }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>

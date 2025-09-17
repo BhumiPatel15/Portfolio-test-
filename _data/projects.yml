@@ -1,0 +1,91 @@
+# Projects Section
+# This section displays your projects as modern flash cards with hover effects
+
+# Project Cards
+# Each project is displayed as an interactive card with tech badges and links
+cards:
+  - name: "Betterway Home - HIPAA-Compliant EMR System"
+    blurb: "Secure healthcare application for NGO serving survivors with role-based access, intake forms, audit logging, and AWS security architecture."
+    description: |
+      Comprehensive healthcare management system built for SAFE Coalition, featuring HIPAA-compliant 
+      architecture on AWS. Implemented secure user authentication, role-based access controls, 
+      and comprehensive audit logging for regulatory compliance.
+    tech: ["React", "AWS", "Cognito", "RDS", "CloudWatch", "Lambda", "S3"]
+    tags: ["Compliance", "Cloud Security", "Healthcare", "Full-Stack"]
+    image: "/assets/img/projects/betterway-home.jpg"  # Optional project screenshot
+    links:
+      - label: "Live Demo"
+        url: "https://example.com/demo"
+        icon: "external"
+      - label: "Source Code"
+        url: "https://github.com/yourusername/betterway-home"
+        icon: "github"
+      - label: "Case Study"
+        url: "https://example.com/case-study"
+        icon: "document"
+    featured: true  # Highlights this project
+
+  - name: "Splunk Incident Response Playbooks"
+    blurb: "Automated IR workflows from detection to containment, featuring Sigma rule integration and custom Splunk queries for healthcare environments."
+    description: |
+      Developed comprehensive incident response automation using Splunk and Sigma rules. 
+      Created standardized playbooks for common security incidents in healthcare IT environments, 
+      reducing response time by 60%.
+    tech: ["Splunk", "Sigma", "Python", "SOAR", "PowerShell"]
+    tags: ["Incident Response", "Automation", "SIEM", "Detection"]
+    image: "/assets/img/projects/ir-playbooks.jpg"
+    links:
+      - label: "Documentation"
+        url: "https://github.com/yourusername/ir-playbooks"
+        icon: "github"
+      - label: "Blog Post"
+        url: "https://yourblog.com/ir-automation"
+        icon: "document"
+
+  - name: "AWS Security Baseline Terraform"
+    blurb: "Infrastructure-as-code templates for HIPAA-compliant AWS environments with automated security controls and monitoring."
+    description: |
+      Terraform modules for deploying secure AWS infrastructure following HIPAA and HITRUST requirements. 
+      Includes automated security group management, CloudTrail configuration, and GuardDuty setup.
+    tech: ["Terraform", "AWS", "CloudFormation", "Python", "GitHub Actions"]
+    tags: ["Infrastructure", "Automation", "Compliance", "DevSecOps"]
+    image: "/assets/img/projects/aws-terraform.jpg"
+    links:
+      - label: "Source Code"
+        url: "https://github.com/yourusername/aws-security-baseline"
+        icon: "github"
+      - label: "Documentation"
+        url: "https://yourusername.github.io/aws-security-docs"
+        icon: "external"
+
+  # Example of additional project (commented out)
+  # - name: "Vulnerability Scanner Dashboard"
+  #   blurb: "Custom dashboard for vulnerability management with risk scoring and automated reporting."
+  #   description: |
+  #     Built a centralized vulnerability management system that aggregates data from multiple 
+  #     security tools and provides risk-based prioritization for remediation efforts.
+  #   tech: ["Python", "Flask", "PostgreSQL", "D3.js", "Docker"]
+  #   tags: ["Security Tools", "Dashboard", "Risk Management"]
+  #   image: "/assets/img/projects/vuln-dashboard.jpg"
+  #   links:
+  #     - label: "Demo"
+  #       url: "https://demo.example.com"
+  #       icon: "external"
+  #     - label: "Code"
+  #       url: "https://github.com/yourusername/vuln-scanner"
+  #       icon: "github"
+
+# Project Settings
+project_settings:
+  show_tech_badges: true    # Display technology badges on cards
+  show_project_tags: true   # Display project category tags
+  enable_hover_effects: true # Enable card hover animations
+  cards_per_row: 2         # Number of cards per row on desktop
+  show_images: true        # Display project images when available
+  
+# Call-to-Action (optional)
+# Displayed at the end of the projects section
+cta:
+  text: "Interested in collaborating on a project?"
+  button_text: "Get in Touch"
+  button_link: "#contact"

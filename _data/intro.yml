@@ -1,0 +1,32 @@
+# Hero/Introduction Section
+# This controls the main hero section at the top of your portfolio
+
+# Personal Information (displayed prominently)
+name: "Bhumi Patel"
+title: "Cybersecurity & Cloud Security"
+tagline: "Turning security strategy into measurable outcomes."
+
+# Hero Image (optional)
+# Place a professional headshot in assets/img/ and uncomment below
+# image: "/assets/img/hero-photo.jpg"
+# image_alt: "Professional photo of Bhumi Patel"
+
+# Call-to-Action Buttons
+# These appear as prominent buttons in the hero section
+# Supported styles: "primary", "secondary", "ghost"
+ctas:
+  - label: "Download Resume/CV"
+    href: "/assets/resume/Resume.pdf"
+    style: "primary"
+    download: true  # adds download attribute to link
+  - label: "Contact Me"
+    href: "#contact"
+    style: "secondary"
+  - label: "View Projects"
+    href: "#projects"
+    style: "ghost"
+
+# Optional: Brief intro text (2-3 lines max)
+# intro_text: |
+#   Cybersecurity graduate student passionate about cloud security and incident response.
+#   Currently building secure, compliant systems for healthcare organizations.

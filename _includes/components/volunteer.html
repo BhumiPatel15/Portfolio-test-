@@ -1,0 +1,96 @@
+<!-- Volunteer Section Component -->
+<div class="volunteer-content">
+  <div class="volunteer-list">
+    {% for item in site.data.volunteer.items %}
+    <div class="volunteer-item">
+      <div class="volunteer-details">
+        <div class="volunteer-header">
+          <h3 class="event-name">{{ item.event }}</h3>
+          <h4 class="org-name">{{ item.org }}</h4>
+          
+          <div class="volunteer-meta">
+            <span class="volunteer-role">{{ item.role }}</span>
+            <span class="volunteer-date">{{ item.date | date: "%B %Y" }}</span>
+            {% if item.location and site.data.volunteer.volunteer_settings.show_locations %}
+            <span class="volunteer-location">{{ item.location }}</span>
+            {% endif %}
+          </div>
+        </div>
+        
+        {% if item.description %}
+        <p class="volunteer-description">{{ item.description }}</p>
+        {% endif %}
+        
+        {% if item.activities %}
+        <ul class="volunteer-activities">
+          {% for activity in item.activities %}
+          <li>{{ activity }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        
+        {% if item.skills_used and site.data.volunteer.volunteer_settings.show_skills_used %}
+        <div class="volunteer-skills">
+          <span class="skills-label">Skills Used:</span>
+          {% include components/badges.html items=item.skills_used %}
+        </div>
+        {% endif %}
+        
+        {% if item.website and site.data.volunteer.volunteer_settings.show_websites %}
+        <div class="volunteer-website">
+          <a href="{{ item.website }}" 
+             class="volunteer-link"
+             target="_blank" 
+             rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-external"></use>
+            </svg>
+            Event Website
+          </a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  {% if site.data.volunteer.conferences_attended %}
+  <div class="conferences-attended">
+    <h3 class="conferences-title">Conference Attendance</h3>
+    <div class="conferences-list">
+      {% for conference in site.data.volunteer.conferences_attended %}
+      <div class="conference-item">
+        <h4 class="conference-name">{{ conference.name }}</h4>
+        <span class="conference-year">{{ conference.year }}</span>
+        <span class="conference-role">{{ conference.role }}</span>
+        {% if conference.highlights %}
+        <ul class="conference-highlights">
+          {% for highlight in conference.highlights %}
+          <li>{{ highlight }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  {% if site.data.volunteer.community_service %}
+  <div class="community-service">
+    <h3 class="service-title">Community Service</h3>
+    <div class="service-list">
+      {% for service in site.data.volunteer.community_service %}
+      <div class="service-item">
+        <h4 class="service-org">{{ service.organization }}</h4>
+        <span class="service-activity">{{ service.activity }}</span>
+        <span class="service-frequency">{{ service.frequency }}</span>
+        {% if service.description %}
+        <p class="service-description">{{ service.description }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
