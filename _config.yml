@@ -4,13 +4,13 @@
 # Site settings
 title: "Bhumi Patel - Cybersecurity Portfolio"
 description: "Cybersecurity Graduate Student specializing in Cloud Security, Incident Response, and Compliance"
-url: "https://yourusername.github.io"
+#url: "https://yourusername.github.io"
 baseurl: ""
 
 # Author information
 author:
   name: "Bhumi Patel"
-  email: "you@example.com"
+  email: "bhumicode@gmail.com"
 
 # Build settings
 markdown: kramdown
@@ -44,9 +44,6 @@ exclude:
   - vendor/ruby/
   - README.md
 
-# Include files
-include:
-  - _pages
 
 # Defaults
 defaults:
@@ -59,11 +56,6 @@ defaults:
 # SEO settings
 lang: en_US
 timezone: America/Chicago
-
-# Social media
-twitter:
-  username: yourusername
-  card: summary_large_image
 
 # GitHub Pages settings
 github:
